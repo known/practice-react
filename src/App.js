@@ -1,21 +1,32 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { Navbar, Grid, Row, Col } from 'react-bootstrap';
 import './App.css';
+import TopNav from './components/TopNav';
+import Sider from './components/Sider';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
+export default class Layout extends Component {
+    render() {
+      return (
+        <div className="App">
+          <Navbar>
+            <Navbar.Header>
+              <Navbar.Brand>
+                <a href="/">React-Practice</a>
+              </Navbar.Brand>
+            </Navbar.Header>
+            <TopNav />
+          </Navbar>
+          <Grid fluid="true">
+            <Row className="show-grid">
+              <Col className="App-sidebar" xs={12} sm={3} md={2}>
+                <Sider />
+              </Col>
+              <Col xs={6} sm={9} md={10}>
+                {this.props.children}
+              </Col>
+            </Row>
+          </Grid>
+        </div>
+      );
+    }
   }
-}
-
-export default App;
