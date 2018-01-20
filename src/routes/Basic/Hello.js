@@ -7,17 +7,16 @@ import React, { Component } from 'react';
 
 // Hello {this.formartUser(user)}!
 
-export default class Hello extends Component {
-    render() {
-        return (
-            <h1>
-                <br />
-                Hello, {this.props.name}!
-            </h1>
-        );
-    }
-
+class Hello extends Component {
     formartUser(user) {
         return user.firstName + ' ' + user.lastName
     }
-};
+
+    render() {
+        return (
+            <h1>Hello, {this.props.name}!</h1>
+        )
+    }
+}
+
+export default Hello
