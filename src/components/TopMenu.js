@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Navbar, Nav } from 'react-bootstrap'
+import { Navbar } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import NavbarItem from './NavbarItem'
+import Menu from './Menu'
 
-const TopNavbar = ({ channels }) => (
+const TopMenu = ({ menus }) => (
     <Navbar inverse collapseOnSelect fixedTop>
         <Navbar.Header>
             <Navbar.Brand>
@@ -13,17 +13,13 @@ const TopNavbar = ({ channels }) => (
             <Navbar.Toggle />
         </Navbar.Header>
         <Navbar.Collapse>
-            <Nav>
-                {channels && channels.map((channel, i) => (
-                    <NavbarItem key={i} item={channel} />
-                ))}
-            </Nav>
+            <Menu menus={menus} />
         </Navbar.Collapse>
     </Navbar>
 )
 
-TopNavbar.propTypes = {
-    channels: PropTypes.array
+TopMenu.propTypes = {
+    menus: PropTypes.array
 }
 
-export default TopNavbar
+export default TopMenu

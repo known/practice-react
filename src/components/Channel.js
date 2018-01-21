@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Redirect, Route } from 'react-router-dom'
 import { Grid, Row, Col } from 'react-bootstrap'
-import LeftNavbar from './LeftNavbar'
-import Channels from '../routes/Channels'
+import LeftMenu from './LeftMenu'
+import Menus from '../routes/Menus'
 
 const ChannelHome = ({ channel }) => (
     <h1>Please select a {channel.id}.</h1>
@@ -22,7 +22,7 @@ class Channel extends Component {
 
     render() {
         const { history, location, match, match: { params: { channelId } } } = this.props
-        const channel = Channels.find(c => c.id === channelId)
+        const channel = Menus.find(c => c.id === channelId)
 
         if (!channel) {
             return <Redirect to="/" />
@@ -32,7 +32,7 @@ class Channel extends Component {
                 <Grid>
                     <Row>
                         <Col md={3}>
-                            <LeftNavbar menus={menus} />
+                            <LeftMenu menus={menus} />
                         </Col>
                         <Col md={9}>
                             <Route exact path={match.url} render={() => <ChannelHome channel={channel} />} />
