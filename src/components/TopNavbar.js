@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Navbar, Nav } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import NavbarItem from './NavbarItem'
 
 const TopNavbar = ({ channels }) => (
     <Navbar inverse collapseOnSelect fixedTop>
@@ -14,9 +15,7 @@ const TopNavbar = ({ channels }) => (
         <Navbar.Collapse>
             <Nav>
                 {channels && channels.map((channel, i) => (
-                    <li>
-                        <Link key={i} to={channel.path}>{channel.title}</Link>
-                    </li>
+                    <NavbarItem key={i} item={channel} />
                 ))}
             </Nav>
         </Navbar.Collapse>
