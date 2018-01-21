@@ -18,6 +18,8 @@ const App = () => (
           <Route path="/" exact={true} component={Home} />
           <Route path="/:channelId" component={Channel} />
         </Switch>
+        <hr />
+        <footer>© 2017 Known</footer>
       </div>
     </div>
   </BrowserRouter>

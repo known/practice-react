@@ -21,7 +21,7 @@ class Channel extends Component {
     }
 
     render() {
-        const { history, location, match, match: { params: { channelId } } } = this.props
+        const { match, match: { params: { channelId } } } = this.props
         const channel = Menus.find(c => c.id === channelId)
 
         if (!channel) {

@@ -1,15 +1,15 @@
 import React from 'react'
-import { Jumbotron, Button } from 'react-bootstrap'
+import { Jumbotron } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 const Home = () => (
-    <Jumbotron>
-		<h1>Hello, world!</h1>
+	<Jumbotron>
+		<h1>Hello, World!</h1>
 		<p>
-			This is a simple hero unit, a simple jumbotron-style component for calling
-			extra attention to featured content or information.
+			这里是本人学习React的示例程序，该程序使用技术栈：React + React Router + React Bootstrap。
 		</p>
 		<p>
-			<Button bsStyle="primary">Learn more</Button>
+			<Link to="/basic" className="btn btn-primary">开始</Link>
 		</p>
 	</Jumbotron>
 )
