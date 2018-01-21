@@ -1,11 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
-// const user = {
-//     firstName: 'Known',
-//     lastName: 'Chen'
-// }
-
-// Hello {this.formartUser(user)}!
+const user = {
+    firstName: 'Known',
+    lastName: 'Chen'
+}
 
 class Hello extends Component {
     formartUser(user) {
@@ -14,9 +12,11 @@ class Hello extends Component {
 
     render() {
         return (
-            <h1>Hello, {this.props.name}!</h1>
+            <h1>Hello, {this.formartUser(this.props.user)}!</h1>
         )
     }
 }
 
-export default Hello
+const HelloApp = () => <Hello user={user} />
+
+export default HelloApp
