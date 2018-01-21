@@ -18,7 +18,7 @@ class Menu extends Component {
         return (
             <Nav {...props}>
                 {menus && menus.map((menu, i) => (
-                    <MenuItem key={i} item={menu} />
+                    <MenuItem key={i} item={menu} active={this.state.activeKey === i} />
                 ))}
             </Nav>
         )

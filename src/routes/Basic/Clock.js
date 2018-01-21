@@ -10,6 +10,10 @@ class Clock extends Component {
         this.state = { date: new Date() }
     }
 
+    tick() {
+        this.setState({ date: new Date() })
+    }
+
     componentDidMount() {
         this.timerId = setInterval(() => this.tick(), 1000)
     }
@@ -22,10 +26,6 @@ class Clock extends Component {
         return (
             <FormattedDate date={this.state.date} />
         )
-    }
-
-    tick() {
-        this.setState({ date: new Date() })
     }
 }
 

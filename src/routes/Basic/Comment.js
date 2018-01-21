@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 function Avatar(props) {
     return (
@@ -6,7 +6,7 @@ function Avatar(props) {
             src={props.user.avatarUrl}
             alt={props.user.name}
         />
-    );
+    )
 }
 
 function UserInfo(props) {
@@ -17,10 +17,10 @@ function UserInfo(props) {
                 {props.user.name}
             </div>
         </div>
-    );
+    )
 }
 
-export default class Comment extends Component {
+class Comment extends Component {
     render() {
         return (
             <div className="comment">
@@ -32,10 +32,12 @@ export default class Comment extends Component {
                     {this.formatDate(this.props.date)}
                 </div>
             </div>
-        );
+        )
     }
 
     formatDate(date) {
-        return '2017';
+        return '2017'
     }
-};
+}
+
+export default Comment
