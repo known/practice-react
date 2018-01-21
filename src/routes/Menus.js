@@ -2,6 +2,7 @@ import Hello from './Basic/Hello'
 import Clock from './Basic/Clock'
 import Toggle from './Basic/Toggle'
 import LoginControl from './Basic/LoginControl'
+import Todo from './Basic/Todo'
 
 const Channels = [
     {
@@ -12,7 +13,8 @@ const Channels = [
             { path: '/basic/hello', title: 'Hello World', component: Hello },
             { path: '/basic/clock', title: 'Clock', component: Clock },
             { path: '/basic/toggle', title: 'Toggle', component: Toggle },
-            { path: '/basic/logincontrol', title: 'LoginControl', component: LoginControl }
+            { path: '/basic/logincontrol', title: 'LoginControl', component: LoginControl },
+            { path: '/basic/todo', title: 'Todo', component: Todo }
         ]
     },
     {
