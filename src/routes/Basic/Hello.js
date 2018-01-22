@@ -1,22 +1,5 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-const user = {
-    firstName: 'Known',
-    lastName: 'Chen'
-}
+const Hello = () => <h1>Hello, World!</h1>
 
-class Hello extends Component {
-    formartUser(user) {
-        return user.firstName + ' ' + user.lastName
-    }
-
-    render() {
-        return (
-            <h1>Hello, {this.formartUser(this.props.user)}!</h1>
-        )
-    }
-}
-
-const HelloApp = () => <Hello user={user} />
-
-export default HelloApp
+export default Hello

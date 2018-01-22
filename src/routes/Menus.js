@@ -1,4 +1,5 @@
 import Hello from './Basic/Hello'
+import JSX from './Basic/Jsx'
 
 import Clock from './Example/Clock'
 import Toggle from './Example/Toggle'
@@ -13,7 +14,8 @@ const Channels = [
         path: '/basic',
         title: '基础',
         menus: [
-            { path: '/basic/hello', title: 'Hello World', component: Hello }
+            { path: '/basic/hello', title: 'Hello World', component: Hello },
+            { path: '/basic/jsx', title: 'JSX', component: JSX }
         ]
     },
     {
