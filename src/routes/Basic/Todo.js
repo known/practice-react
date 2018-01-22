@@ -2,15 +2,15 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { FormGroup, ControlLabel, FormControl, HelpBlock, Button } from 'react-bootstrap'
 
-TodoList.propTypes = {
-    items: PropTypes.array
-}
-
 const TodoList = ({ items }) => (
     <ul>
         {items.map(item => <li key={item.id}>{item.text}</li>)}
     </ul>
 )
+
+TodoList.propTypes = {
+    items: PropTypes.array
+}
 
 class TodoApp extends Component {
     state = {
