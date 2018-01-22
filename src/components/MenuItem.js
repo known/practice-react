@@ -14,8 +14,7 @@ const MenuItem = ({ item }) => (
 )
 
 MenuItem.propTypes = {
-    item: PropTypes.object,
-    active: PropTypes.bool
+    item: PropTypes.object
 }
 
 export default MenuItem
