@@ -8,6 +8,7 @@ body {
 
 .left-menu .active {
     border-left: 3px solid #1b809e;
+    background-color: #f1f1f1;
 }
 
 .loading {

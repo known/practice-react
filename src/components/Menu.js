@@ -1,28 +1,18 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { Nav } from 'react-bootstrap'
 import MenuItem from './MenuItem'
 
-class Menu extends Component {
-    static propTypes = {
-        menus: PropTypes.array
-    }
+const Menu = ({ menus, ...props }) => (
+    <Nav {...props}>
+        {menus && menus.map((menu, i) => (
+            <MenuItem key={i} item={menu} />
+        ))}
+    </Nav>
+)
 
-    state = {
-        activeKey: 0
-    }
-
-    render() {
-        const { menus, ...props } = this.props
-
-        return (
-            <Nav {...props}>
-                {menus && menus.map((menu, i) => (
-                    <MenuItem key={i} item={menu} active={this.state.activeKey === i} />
-                ))}
-            </Nav>
-        )
-    }
+Menu.propTypes = {
+    menus: PropTypes.array
 }
 
 export default Menu
