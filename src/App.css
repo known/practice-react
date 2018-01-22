@@ -6,6 +6,10 @@ body {
     border: 0;
 }
 
+.left-menu .active {
+    border-left: 3px solid #1b809e;
+}
+
 .loading {
     animation: loading 10s ease infinite;
     background-image: linear-gradient(
