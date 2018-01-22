@@ -67,4 +67,6 @@ class Blog extends Component {
     }
 }
 
-export default Blog
+const BlogApp = () => <Blog posts={posts} />
+
+export default BlogApp

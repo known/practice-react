@@ -36,8 +36,10 @@ class Comment extends Component {
     }
 
     formatDate(date) {
-        return '2017'
+        return date.toString()
     }
 }
 
-export default Comment
+const CommentApp = () => <Comment author="known" text="Hello World!" date={Date.now()} />
+
+export default CommentApp
