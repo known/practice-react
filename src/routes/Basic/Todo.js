@@ -2,25 +2,24 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { FormGroup, ControlLabel, FormControl, HelpBlock, Button } from 'react-bootstrap'
 
+TodoList.propTypes = {
+    items: PropTypes.array
+}
+
 const TodoList = ({ items }) => (
     <ul>
         {items.map(item => <li key={item.id}>{item.text}</li>)}
     </ul>
 )
 
-TodoList.propTypes = {
-    items: PropTypes.array
-}
-
 class TodoApp extends Component {
-    constructor(props) {
-        super(props)
-        this.state = { items: [], isLoading: false, text: '' }
-        this.handleChange = this.handleChange.bind(this)
-        this.handleSubmit = this.handleSubmit.bind(this)
+    state = {
+        items: [],
+        isLoading: false,
+        text: ''
     }
 
-    getValidationState() {
+    getValidationState = () => {
         const length = this.state.text.length;
         if (length > 10) return 'success';
         else if (length > 5) return 'warning';
@@ -28,11 +27,11 @@ class TodoApp extends Component {
         return null;
     }
 
-    handleChange(e) {
+    handleChange = (e) => {
         this.setState({ text: e.target.value })
     }
 
-    handleSubmit(e) {
+    handleSubmit = (e) => {
         e.preventDefault()
         if (!this.state.text.length) {
             return

@@ -4,6 +4,10 @@ import { Navbar } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import Menu from './Menu'
 
+TopMenu.propTypes = {
+    menus: PropTypes.array
+}
+
 const TopMenu = ({ menus }) => (
     <Navbar inverse collapseOnSelect fixedTop>
         <Navbar.Header>
@@ -17,9 +21,5 @@ const TopMenu = ({ menus }) => (
         </Navbar.Collapse>
     </Navbar>
 )
-
-TopMenu.propTypes = {
-    menus: PropTypes.array
-}
 
 export default TopMenu
