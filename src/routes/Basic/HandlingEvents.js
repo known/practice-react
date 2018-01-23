@@ -86,6 +86,8 @@ class DeleteButton extends Component {
     }
 }
 
+const deleteData = [1, 2, 3]
+
 const App = () => (
     <div>
         <ActionLink />
@@ -93,7 +95,7 @@ const App = () => (
         <Toggle />
         <br /><br />
         <LoggingButton />
-        <DeleteButton data={[1, 2, 3]} />
+        <DeleteButton data={deleteData} />
     </div>
 )
 

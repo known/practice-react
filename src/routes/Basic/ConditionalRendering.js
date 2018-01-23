@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Button, Glyphicon, Badge, Alert } from 'react-bootstrap'
 
 function UserGreeting(props) {
     return <h1>Welcome back!</h1>
@@ -18,17 +19,17 @@ function Greeting(props) {
 
 function LoginButton(props) {
     return (
-        <button onClick={props.onClick}>
+        <Button bsStyle="primary" onClick={props.onClick}>
             Login
-        </button>
+        </Button>
     )
 }
 
 function LogoutButton(props) {
     return (
-        <button onClick={props.onClick}>
+        <Button bsStyle="danger" onClick={props.onClick}>
             Logout
-        </button>
+        </Button>
     )
 }
 
@@ -67,4 +68,71 @@ class LoginControl extends Component {
     }
 }
 
-export default LoginControl
+//Inline If with Logical && Operator
+function Mailbox(props) {
+    const { unreadMessages } = props
+    return (
+        <div style={{ marginTop: 10 }}>
+            <div style={{ fontSize: 18 }}>
+                <Glyphicon glyph="envelope" />
+                <Badge>{unreadMessages.length}</Badge>
+            </div>
+            <h1>Hello!</h1>
+            {unreadMessages.length &&
+                <h2>
+                    You have {unreadMessages.length} unread messages.
+                </h2>
+            }
+        </div>
+    )
+}
+
+//Preventing Component from Rendering
+function WarningBanner(props) {
+    if (!props.warn) {
+        return null
+    }
+
+    return (
+        <Alert bsStyle="warning">
+            <strong>Holy guacamole!</strong> Best check yo self, you're not looking too	good.
+        </Alert>
+    )
+}
+
+class Page extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = { showWarning: true }
+        this.handleToggleClick = this.handleToggleClick.bind(this)
+    }
+
+    handleToggleClick() {
+        this.setState(prevState => ({
+            showWarning: !prevState.showWarning
+        }))
+    }
+
+    render() {
+        return (
+            <div>
+                <WarningBanner warn={this.state.showWarning} />
+                <Button onClick={this.handleToggleClick}>
+                    {this.state.showWarning ? 'Hide' : 'Show'}
+                </Button>
+            </div>
+        )
+    }
+}
+
+const unreadMessages = ['React', 'Re: React', 'Re:Re: React']
+
+const App = () => (
+    <div>
+        <LoginControl />
+        <Mailbox unreadMessages={unreadMessages} />
+        <Page />
+    </div>
+)
+
+export default App
