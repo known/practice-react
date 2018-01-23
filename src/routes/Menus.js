@@ -1,8 +1,10 @@
 import Hello from './Basic/Hello'
 import JSX from './Basic/Jsx'
 import ComponentProps from './Basic/ComponentProps'
+import StateLifecyle from './Basic/StateLifecycle'
 
 import Blog from './Example/Blog'
+import StateLifecycle from './Basic/StateLifecycle';
 
 const Channels = [
     {
@@ -12,7 +14,8 @@ const Channels = [
         menus: [
             { path: '/basic/hello', title: 'Hello World', component: Hello },
             { path: '/basic/jsx', title: 'JSX', component: JSX },
-            { path: '/basic/component-props', title: 'Component Props', component: ComponentProps }
+            { path: '/basic/component-props', title: 'Component Props', component: ComponentProps },
+            { path: '/basic/state-lifecycle', title: 'State Lifecyle', component: StateLifecycle }
         ]
     },
     {

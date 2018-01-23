@@ -26,4 +26,12 @@ class Clock extends Component {
     }
 }
 
-export default Clock
+const App = () => (
+    <div>
+        <Clock />
+        <Clock />
+        <Clock />
+    </div>
+)
+
+export default App
