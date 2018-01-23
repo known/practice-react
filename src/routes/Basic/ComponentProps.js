@@ -1,5 +1,18 @@
 import React, { Component } from 'react'
 
+//Functional Component
+function FuncWelcome(props) {
+    return <h1>Hello, {props.name}</h1>
+}
+
+//Class Component
+class ClsWelcome extends Component {
+    render() {
+        return <h1>Hello, {this.props.name}</h1>
+    }
+}
+
+//Extracting Components
 function Avatar(props) {
     return (
         <img className="Avatar"
@@ -21,6 +34,10 @@ function UserInfo(props) {
 }
 
 class Comment extends Component {
+    formatDate(date) {
+        return new Date(date).toLocaleTimeString()
+    }
+
     render() {
         return (
             <div className="comment">
@@ -34,12 +51,15 @@ class Comment extends Component {
             </div>
         )
     }
-
-    formatDate(date) {
-        return date.toString()
-    }
 }
 
-const CommentApp = () => <Comment author="known" text="Hello World!" date={Date.now()} />
+//Composing Components
+const App = () => (
+    <div>
+        <FuncWelcome name="known" />
+        <ClsWelcome name="christina" />
+        <Comment author="known" text="Hello World!" date={Date.now()} />
+    </div>
+)
 
-export default CommentApp
+export default App

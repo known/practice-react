@@ -1,12 +1,8 @@
 import Hello from './Basic/Hello'
 import JSX from './Basic/Jsx'
+import ComponentProps from './Basic/ComponentProps'
 
-import Clock from './Example/Clock'
-import Toggle from './Example/Toggle'
-import LoginControl from './Example/LoginControl'
-import Todo from './Example/Todo'
 import Blog from './Example/Blog'
-import Comment from './Example/Comment'
 
 const Channels = [
     {
@@ -15,7 +11,8 @@ const Channels = [
         title: '基础',
         menus: [
             { path: '/basic/hello', title: 'Hello World', component: Hello },
-            { path: '/basic/jsx', title: 'JSX', component: JSX }
+            { path: '/basic/jsx', title: 'JSX', component: JSX },
+            { path: '/basic/component-props', title: 'Component Props', component: ComponentProps }
         ]
     },
     {
@@ -23,12 +20,7 @@ const Channels = [
         path: '/example',
         title: '示例',
         menus: [
-            { path: '/example/clock', title: 'Clock', component: Clock },
-            { path: '/example/toggle', title: 'Toggle', component: Toggle },
-            { path: '/example/logincontrol', title: 'LoginControl', component: LoginControl },
-            { path: '/example/todo', title: 'Todo', component: Todo },
-            { path: '/example/blog', title: 'Blog', component: Blog },
-            { path: '/example/comment', title: 'Comment', component: Comment }
+            { path: '/example/blog', title: 'Blog', component: Blog }
         ]
     }
 ]
