@@ -62,6 +62,7 @@ class DeleteButton extends Component {
             <div>
                 {data && data.map((id, i) => (
                     <div key={i}>
+                        <span>{id} </span>
                         <Button
                             bsStyle="danger"
                             bsSize="xsmall"
