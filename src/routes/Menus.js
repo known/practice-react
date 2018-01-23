@@ -1,10 +1,10 @@
 import Hello from './Basic/Hello'
 import JSX from './Basic/Jsx'
 import ComponentProps from './Basic/ComponentProps'
-import StateLifecyle from './Basic/StateLifecycle'
+import StateLifecycle from './Basic/StateLifecycle'
+import HandlingEvents from './Basic/HandlingEvents'
 
 import Blog from './Example/Blog'
-import StateLifecycle from './Basic/StateLifecycle';
 
 const Channels = [
     {
@@ -15,7 +15,8 @@ const Channels = [
             { path: '/basic/hello', title: 'Hello World', component: Hello },
             { path: '/basic/jsx', title: 'JSX', component: JSX },
             { path: '/basic/component-props', title: 'Component Props', component: ComponentProps },
-            { path: '/basic/state-lifecycle', title: 'State Lifecyle', component: StateLifecycle }
+            { path: '/basic/state-lifecycle', title: 'State Lifecyle', component: StateLifecycle },
+            { path: '/basic/handling-events', title: 'Handling Events', component: HandlingEvents }
         ]
     },
     {
