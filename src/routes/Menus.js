@@ -4,6 +4,7 @@ import ComponentProps from './Basic/ComponentProps'
 import StateLifecycle from './Basic/StateLifecycle'
 import HandlingEvents from './Basic/HandlingEvents'
 import ConditionalRendering from './Basic/ConditionalRendering'
+import Forms from './Basic/Forms'
 
 import Blog from './Example/Blog'
 
@@ -18,7 +19,8 @@ const Channels = [
             { path: '/basic/component-props', title: 'Component Props', component: ComponentProps },
             { path: '/basic/state-lifecycle', title: 'State Lifecyle', component: StateLifecycle },
             { path: '/basic/handling-events', title: 'Handling Events', component: HandlingEvents },
-            { path: '/basic/conditional-rendering', title: 'Conditional Rendering', component: ConditionalRendering }
+            { path: '/basic/conditional-rendering', title: 'Conditional Rendering', component: ConditionalRendering },
+            { path: '/basic/forms', title: 'Forms', component: Forms }
         ]
     },
     {
