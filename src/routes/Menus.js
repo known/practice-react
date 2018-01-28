@@ -7,6 +7,7 @@ import ConditionalRendering from './Basic/ConditionalRendering'
 import ListAndKey from './Basic/ListAndKey'
 import Forms from './Basic/Forms'
 import LiftingStateUp from './Basic/LiftingStateUp'
+import CompositionVsInheritance from './Basic/CompositionVsInheritance'
 
 import Blog from './Example/Blog'
 
@@ -24,7 +25,8 @@ const Channels = [
             { path: '/basic/conditional-rendering', title: 'Conditional Rendering', component: ConditionalRendering },
             { path: '/basic/lists-and-keys', title: 'Lists and Keys', component: ListAndKey },
             { path: '/basic/forms', title: 'Forms', component: Forms },
-            { path: '/basic/lifting-state-up', title: 'Lifting State Up', component: LiftingStateUp }
+            { path: '/basic/lifting-state-up', title: 'Lifting State Up', component: LiftingStateUp },
+            { path: '/basic/composition-vs-inheritance', title: 'Composition vs Inheritance', component: CompositionVsInheritance }
         ]
     },
     {
