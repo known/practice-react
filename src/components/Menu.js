@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { Nav } from 'react-bootstrap'
 import MenuItem from './MenuItem'
 
@@ -10,9 +9,5 @@ const Menu = ({ menus, ...props }) => (
         ))}
     </Nav>
 )
-
-Menu.propTypes = {
-    menus: PropTypes.array
-}
 
 export default Menu

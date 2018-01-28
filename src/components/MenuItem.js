@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { Route, Link } from 'react-router-dom'
 
 const MenuItem = ({ item }) => (
@@ -12,9 +11,5 @@ const MenuItem = ({ item }) => (
         )}
     />
 )
-
-MenuItem.propTypes = {
-    item: PropTypes.object
-}
 
 export default MenuItem

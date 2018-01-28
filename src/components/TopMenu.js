@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { Navbar } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import Menu from './Menu'
@@ -17,9 +16,5 @@ const TopMenu = ({ menus }) => (
         </Navbar.Collapse>
     </Navbar>
 )
-
-TopMenu.propTypes = {
-    menus: PropTypes.array
-}
 
 export default TopMenu

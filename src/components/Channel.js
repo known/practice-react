@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import { Redirect, Route } from 'react-router-dom'
 import { Grid, Row, Col } from 'react-bootstrap'
 import LeftMenu from './LeftMenu'
@@ -10,16 +9,6 @@ const ChannelHome = ({ channel }) => (
 )
 
 class Channel extends Component {
-    static propTypes = {
-        location: PropTypes.object,
-        history: PropTypes.object,
-        match: PropTypes.shape({
-            params: PropTypes.shape({
-                channelId: PropTypes.string
-            })
-        })
-    }
-
     render() {
         const { match, match: { params: { channelId } } } = this.props
         const channel = Menus.find(c => c.id === channelId)

@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import {
     Form, FormGroup, ControlLabel, FormControl, HelpBlock,
     Grid, Row, Col,
@@ -11,10 +10,6 @@ const TodoList = ({ items }) => (
         {items.map(item => <li key={item.id}>{JSON.stringify(item)}</li>)}
     </ul>
 )
-
-TodoList.propTypes = {
-    items: PropTypes.array
-}
 
 const FieldGroup = ({ id, validationState, label, help, ...props }) => (
     <FormGroup controlId={id} validationState={validationState}>
@@ -28,27 +23,16 @@ const AppForm = ({ onChange }) => (
     <Grid>
         <Row className="show-grid">
             <Col xs={4} md={4}>
-                <FieldGroup
-                    id="Todo"
-                    type="text"
-                    label="事项"
-                    help="至少需要输入5-10个字符。"
-                    placeholder="请输入TODO"
+                <FieldGroup id="Todo" type="text" label="事项"
+                    help="至少需要输入5-10个字符。" placeholder="请输入TODO"
                     onChange={onChange}
                 />
-                <FieldGroup
-                    id="Email"
-                    type="email"
-                    label="Email address"
-                    placeholder="Enter email"
+                <FieldGroup id="Email" type="email"
+                    label="Email address" placeholder="Enter email"
                     onChange={onChange}
                 />
-                <FieldGroup
-                    id="File"
-                    type="file"
-                    label="File"
-                    help="Example block-level help text here."
-                    onChange={onChange}
+                <FieldGroup id="File" type="file" label="File"
+                    help="Example block-level help text here." onChange={onChange}
                 />
                 <Checkbox checked readOnly>Checkbox</Checkbox>
                 <Radio checked readOnly>Radio</Radio>
@@ -70,12 +54,8 @@ const AppForm = ({ onChange }) => (
                 </FormGroup>
             </Col>
             <Col xs={4} md={4}>
-                <FieldGroup
-                    id="Text"
-                    type="text"
-                    label="Text"
-                    placeholder="Enter text"
-                    onChange={onChange}
+                <FieldGroup id="Text" label="Text" type="text"
+                    placeholder="Enter text" onChange={onChange}
                 />
                 <FieldGroup id="Password" label="Password" type="password" />
                 <FormGroup>
@@ -145,11 +125,7 @@ class App extends Component {
                 <TodoList items={items} />
                 <Form>
                     <AppForm onChange={this.handleChange} />
-                    <Button
-                        bsStyle="primary"
-                        disabled={isLoading}
-                        onClick={!isLoading ? this.handleSubmit : null}
-                    >
+                    <Button bsStyle="primary" disabled={isLoading} onClick={!isLoading ? this.handleSubmit : null}>
                         {isLoading ? '提交中...' : '提交'}
                     </Button>
                 </Form>
