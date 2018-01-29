@@ -8,6 +8,7 @@ import ListAndKey from './Basic/ListAndKey'
 import Forms from './Basic/Forms'
 import LiftingStateUp from './Basic/LiftingStateUp'
 import CompositionVsInheritance from './Basic/CompositionVsInheritance'
+import ThinkingInReact from './Basic/ThinkingInReact'
 
 import Blog from './Example/Blog'
 
@@ -26,7 +27,8 @@ const Channels = [
             { path: '/basic/lists-and-keys', title: 'Lists and Keys', component: ListAndKey },
             { path: '/basic/forms', title: 'Forms', component: Forms },
             { path: '/basic/lifting-state-up', title: 'Lifting State Up', component: LiftingStateUp },
-            { path: '/basic/composition-vs-inheritance', title: 'Composition vs Inheritance', component: CompositionVsInheritance }
+            { path: '/basic/composition-vs-inheritance', title: 'Composition vs Inheritance', component: CompositionVsInheritance },
+            { path: '/basic/thinking-in-react', title: 'Thinking In React', component: ThinkingInReact }
         ]
     },
     {
