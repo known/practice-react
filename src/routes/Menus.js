@@ -11,6 +11,7 @@ import CompositionVsInheritance from './Basic/CompositionVsInheritance'
 import ThinkingInReact from './Basic/ThinkingInReact'
 
 import JsxInDepth from './Advance/JsxInDepth'
+import RefsAndTheDOM from './Advance/RefsAndTheDOM'
 
 import Blog from './Example/Blog'
 
@@ -38,7 +39,8 @@ const Channels = [
         path: '/advance',
         title: '高级',
         menus: [
-            { path: '/advance/jsx-in-depth', title: 'Jsx In Depth', component: JsxInDepth }
+            { path: '/advance/jsx-in-depth', title: 'Jsx In Depth', component: JsxInDepth },
+            { path: '/advance/refs-and-the-dom', title: 'Refs and the DOM', component: RefsAndTheDOM }
         ]
     },
     {
