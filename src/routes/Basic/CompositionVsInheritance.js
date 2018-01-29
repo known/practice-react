@@ -48,7 +48,7 @@ function Dialog(props) {
     )
 }
 
-function WelcomeDialog() {
+function WelcomeDialog1() {
     return (
         <Dialog
             title="Welcome"
@@ -90,16 +90,21 @@ class SignUpDialog extends React.Component {
 
 function App() {
     return (
-        <SplitPane
-            left={
-                <h1>Left</h1>
-            }
-            right={
-                <div>
-                    <h2>Right</h2>
-                    <SignUpDialog />
-                </div>
-            } />
+        <div>
+            <SplitPane
+                left={
+                    <h1>Left</h1>
+                }
+                right={
+                    <div>
+                        <h2>Right</h2>
+                        <SignUpDialog />
+                    </div>
+                }
+            />
+            <WelcomeDialog />
+            <WelcomeDialog1 />
+        </div>
     )
 }
 

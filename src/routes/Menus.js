@@ -10,6 +10,8 @@ import LiftingStateUp from './Basic/LiftingStateUp'
 import CompositionVsInheritance from './Basic/CompositionVsInheritance'
 import ThinkingInReact from './Basic/ThinkingInReact'
 
+import JsxInDepth from './Advance/JsxInDepth'
+
 import Blog from './Example/Blog'
 
 const Channels = [
@@ -29,6 +31,14 @@ const Channels = [
             { path: '/basic/lifting-state-up', title: 'Lifting State Up', component: LiftingStateUp },
             { path: '/basic/composition-vs-inheritance', title: 'Composition vs Inheritance', component: CompositionVsInheritance },
             { path: '/basic/thinking-in-react', title: 'Thinking In React', component: ThinkingInReact }
+        ]
+    },
+    {
+        id: 'advance',
+        path: '/advance',
+        title: '高级',
+        menus: [
+            { path: '/advance/jsx-in-depth', title: 'Jsx In Depth', component: JsxInDepth }
         ]
     },
     {
